@@ -1,0 +1,143 @@
+/* Color Palette */
+:root {
+    --light-blue: #c8d9ed;
+    --pale-blue: #e1f1fd;
+    --sky-blue: #c1d8f0;
+    --navy-blue: #4663ac;
+    --cloud-blue: #d2deeb;
+    --bright-blue: #00b8ff;
+    --mid-blue: #009bd6;
+    --deep-blue: #00719c;
+    --dark-blue: #00415a;
+    --midnight-blue: #001f2b;
+  }
+  
+  /* General Styles */
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--midnight-blue);
+    color: var(--light-blue);
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--bright-blue);
+  }
+  
+  a:hover {
+    color: var(--mid-blue);
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--deep-blue);
+    padding: 10px 20px;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: var(--cloud-blue);
+    font-weight: bold;
+  }
+  
+  .nav-links a:hover {
+    color: var(--bright-blue);
+  }
+  
+  .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    padding: 50px 20px;
+    text-align: center;
+    color: var(--pale-blue);
+  }
+  
+  .contact-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--bright-blue);
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2em;
+  }
+  
+  .info-item i {
+    font-size: 1.5em;
+    color: var(--bright-blue);
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid var(--light-blue);
+    border-radius: 5px;
+    background-color: var(--dark-blue);
+    color: var(--light-blue);
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: var(--bright-blue);
+    outline: none;
+  }
+  
+  .contact-form button {
+    background-color: var(--bright-blue);
+    color: var(--midnight-blue);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: var(--mid-blue);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--dark-blue);
+    color: var(--cloud-blue);
+  }
+  
