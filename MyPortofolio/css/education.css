@@ -16,15 +16,16 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background-color: var(--midnight-blue);
+    background-color: var(--dark-blue);
     color: var(--light-blue);
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 a {
     text-decoration: none;
 }
 
-h1, h2 {
+h1, h2, h3 {
     margin: 0;
 }
 
@@ -61,9 +62,9 @@ h1, h2 {
 
 /* Education Section */
 .education-section {
-    padding: 50px 20px;
+    width: 100%;
+    max-width: 1500px;
     text-align: center;
-    background-color: var(--dark-blue);
 }
 
 .education-section h1 {
@@ -73,20 +74,42 @@ h1, h2 {
 }
 
 .education-list {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 280px); /* Two boxes per row */
+    gap: 40px; /* Space between the items */
+    justify-content: center;
+    margin-top: 20px;
 }
 
+/* Education List (Parent container for the boxes) */
+.education-list {
+    display: flex;
+    flex-wrap: wrap;  /* Allow the boxes to wrap onto a new line if necessary */
+    justify-content: center;  /* Center align the boxes horizontally */
+    gap: 40px;  /* Space between the boxes */
+    margin-top: 20px;
+}
+
+/* Education Item */
 .education-item {
-    max-width: 700px;
-    padding: 20px;
     background-color: var(--midnight-blue);
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    text-align: left;
     color: var(--cloud-blue);
+    text-align: left;
+    height: 400px; /* Fixed height to ensure all boxes are the same height */
+    width: 400px; /* Adjust width as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;  /* Add margin for vertical spacing between boxes */
+}
+
+
+/* Last box takes the full width of the row */
+.education-list > .education-item:nth-child(5) {
+    grid-column: span 2; /* Last item spans both columns */
 }
 
 .education-item h2 {
@@ -101,12 +124,17 @@ h1, h2 {
 .education-item ul {
     list-style: disc;
     padding-left: 20px;
+    margin: 10px 0 0;
+}
+
+.education-item ul li {
+    margin-bottom: 5px;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: var(--dark-blue);
+    background-color: var(--deep-blue);
     color: var(--cloud-blue);
-}
+  }

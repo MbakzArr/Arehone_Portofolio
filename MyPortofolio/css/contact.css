@@ -137,7 +137,6 @@
   footer {
     text-align: center;
     padding: 10px 0;
-    background-color: var(--dark-blue);
+    background-color: var(--deep-blue);
     color: var(--cloud-blue);
   }
-  

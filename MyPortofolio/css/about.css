@@ -18,6 +18,9 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: var(--midnight-blue);
   color: var(--light-blue);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the body takes the full height of the viewport */
 }
 
 a {
@@ -107,6 +110,13 @@ strong {
 footer {
   text-align: center;
   padding: 10px 0;
-  background-color: var(--dark-blue);
+  background-color: var(--deep-blue);
   color: var(--cloud-blue);
+  width: 100%; /* Ensure the footer spans the entire width of the page */
+  height: 40px;
+  margin-top: auto; /* Push the footer to the bottom of the page */
+}
+
+footer p {
+  margin: 0;
 }
