@@ -1,142 +1,180 @@
 /* Color Palette */
 :root {
-    --light-blue: #c8d9ed;
-    --pale-blue: #e1f1fd;
-    --sky-blue: #c1d8f0;
-    --navy-blue: #4663ac;
-    --cloud-blue: #d2deeb;
-    --bright-blue: #00b8ff;
-    --mid-blue: #009bd6;
-    --deep-blue: #00719c;
-    --dark-blue: #00415a;
-    --midnight-blue: #001f2b;
-  }
-  
-  /* General Styles */
-  body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: var(--midnight-blue);
-    color: var(--light-blue);
-  }
-  
-  a {
-    text-decoration: none;
+  --light-blue: #c8d9ed;
+  --pale-blue: #e1f1fd;
+  --sky-blue: #c1d8f0;
+  --navy-blue: #4663ac;
+  --cloud-blue: #d2deeb;
+  --bright-blue: #00b8ff;
+  --mid-blue: #009bd6;
+  --deep-blue: #00719c;
+  --dark-blue: #00415a;
+  --midnight-blue: #001f2b;
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--midnight-blue);
+  color: var(--light-blue);
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Logo */
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--deep-blue);
+  padding: 10px 20px;
+  position: relative;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--cloud-blue);
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: var(--bright-blue);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--light-blue);
+  margin: 3px 0;
+}
+
+/* Responsive Navbar for Phones */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
   }
 
-  .logo img {
-    width: 50px; /* Adjust size to fit nicely in the header */
-    height: 50px;
-    border-radius: 50%; /* Makes it circular */
-    object-fit: cover; /* Ensures the image scales proportionally */
-  }
-  
-  
-  h1 {
-    margin: 0;
-  }
-  
-  /* Navbar */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--deep-blue);
-    padding: 10px 20px;
-  }
-  
   .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links a {
-    color: var(--cloud-blue);
-    font-weight: bold;
-  }
-  
-  .nav-links a:hover {
-    color: var(--bright-blue);
-  }
-  
-  /* Hero Section */
-  .hero-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(
-        rgba(0, 31, 43, 0.7),
-        rgba(0, 31, 43, 0.7)
-      ),
-      url('/images/Backimg.png');
-    background-size: cover;
-    background-position: center;
-    color: var(--light-blue);
-    text-align: center;
-    padding: 0 20px;
-  }
-  
-  .hero-content {
-    max-width: 700px;
-  }
-  
-  .hero-content h1 {
-    font-size: 3.5em;
-    line-height: 1.2;
-    color: var(--pale-blue);
-  }
-  
-  .hero-content .highlight {
-    color: var(--bright-blue);
-  }
-  
-  .hero-content p {
-    font-size: 1.2em;
-    margin: 20px 0;
-  }
-  
-  .hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 1em;
-    font-weight: bold;
-    transition: background 0.3s ease;
-  }
-  
-  .primary-btn {
-    background-color: var(--bright-blue);
-    color: var(--midnight-blue);
-  }
-  
-  .primary-btn:hover {
-    background-color: var(--mid-blue);
-  }
-  
-  .secondary-btn {
-    background-color: transparent;
-    border: 2px solid var(--bright-blue);
-    color: var(--bright-blue);
-  }
-  
-  .secondary-btn:hover {
-    background-color: var(--bright-blue);
-    color: var(--midnight-blue);
-  }
-  
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 10px 0;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
     background-color: var(--deep-blue);
-    color: var(--cloud-blue);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   }
-  
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(0, 31, 43, 0.7),
+      rgba(0, 31, 43, 0.7)
+    ),
+    url('/images/Backimg.png');
+  background-size: cover;
+  background-position: center;
+  color: var(--light-blue);
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: 3.5em;
+  line-height: 1.2;
+  color: var(--pale-blue);
+}
+
+.hero-content .highlight {
+  color: var(--bright-blue);
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin: 20px 0;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.primary-btn {
+  background-color: var(--bright-blue);
+  color: var(--midnight-blue);
+}
+
+.primary-btn:hover {
+  background-color: var(--mid-blue);
+}
+
+.secondary-btn {
+  background-color: transparent;
+  border: 2px solid var(--bright-blue);
+  color: var(--bright-blue);
+}
+
+.secondary-btn:hover {
+  background-color: var(--bright-blue);
+  color: var(--midnight-blue);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: var(--deep-blue);
+  color: var(--cloud-blue);
+}

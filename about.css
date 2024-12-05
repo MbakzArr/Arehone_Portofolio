@@ -20,7 +20,7 @@ body {
   color: var(--light-blue);
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures the body takes the full height of the viewport */
+  min-height: 100vh;
 }
 
 a {
@@ -38,12 +38,25 @@ h1, h2 {
   align-items: center;
   background-color: var(--deep-blue);
   padding: 10px 20px;
+  position: relative;
 }
 
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
 }
 
 .nav-links a {
@@ -55,11 +68,42 @@ h1, h2 {
   color: var(--bright-blue);
 }
 
-.logo img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  object-fit: cover;
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: var(--light-blue);
+  margin: 3px 0;
+}
+
+/* Responsive Design for Phones */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Show the hamburger menu on smaller screens */
+  }
+
+  .nav-links {
+    display: none; /* Hide the navigation links initially */
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px; /* Below the navbar */
+    right: 20px;
+    background-color: var(--deep-blue);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-links.show {
+    display: flex; /* Show the links when toggled */
+  }
 }
 
 /* About Section */
@@ -112,9 +156,9 @@ footer {
   padding: 10px 0;
   background-color: var(--deep-blue);
   color: var(--cloud-blue);
-  width: 100%; /* Ensure the footer spans the entire width of the page */
+  width: 100%;
   height: 40px;
-  margin-top: auto; /* Push the footer to the bottom of the page */
+  margin-top: auto;
 }
 
 footer p {

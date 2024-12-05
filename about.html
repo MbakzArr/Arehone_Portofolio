@@ -11,6 +11,11 @@
     <div class="logo">
       <img src="/images/logo.jpeg" alt="Logo">
     </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
     <nav>
       <ul class="nav-links">
         <li><a href="/index.html">Home</a></li>
@@ -51,5 +56,12 @@
   <footer>
     <p>&copy; 2024 MyPortfolio. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
 </body>
 </html>
