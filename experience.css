@@ -1,0 +1,167 @@
+/* Color Palette */
+:root {
+    --light-blue: #c8d9ed;
+    --pale-blue: #e1f1fd;
+    --sky-blue: #c1d8f0;
+    --navy-blue: #4663ac;
+    --cloud-blue: #d2deeb;
+    --bright-blue: #00b8ff;
+    --mid-blue: #009bd6;
+    --deep-blue: #00719c;
+    --dark-blue: #00415a; /* Dark blue that is not the darkest */
+    --midnight-blue: #001f2b;
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--dark-blue);
+    color: var(--light-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensure the body takes up at least the full height of the viewport */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--deep-blue);
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--cloud-blue);
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: var(--bright-blue);
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Experience Section */
+.experience-section, .skills-section {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.experience-section h1, .skills-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: var(--bright-blue); /* Same color for both headings */
+}
+
+.experience-list, .skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;  /* Reduced gap between the items */
+    align-items: center;
+}
+
+.experience-item, .skills-category {
+    max-width: 700px;
+    padding: 20px;
+    background-color: var(--midnight-blue);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    color: var(--cloud-blue);
+    margin-bottom: 20px;  /* Add space between experience items and skills items */
+}
+
+.experience-item h2, .skills-category h3 {
+    color: var(--bright-blue);
+    margin-bottom: 10px;
+}
+
+.experience-item p, .skills-category p {
+    margin: 5px 0;
+}
+
+.experience-item ul, .skills-category ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+/* Two-column layout for skills list */
+.skills-category ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create two equal-width columns */
+    gap: 15px;  /* Adjust gap between items */
+    padding-left: 0;
+}
+
+.experience-item ul li, .skills-category ul li {
+    color: var(--navy-blue);
+    margin-bottom: 5px;
+}
+
+.skills-category ul li {
+    display: flex;
+    align-items: center;
+}
+
+.skills-category ul li i {
+    margin-right: 10px;
+    color: var(--bright-blue);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--deep-blue);
+    color: var(--cloud-blue);
+    width: 100%; /* Ensure the footer spans the entire width of the page */
+    position: relative; /* Default position to make sure it stays at the bottom */
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-section, .skills-section {
+        padding: 15px;
+    }
+
+    .skills-category ul li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Stack the columns vertically on smaller screens */
+    .skills-category ul {
+        grid-template-columns: 1fr; /* Switch to a single column layout */
+    }
+}

@@ -1,0 +1,122 @@
+/* Color Palette */
+:root {
+  --light-blue: #c8d9ed;
+  --pale-blue: #e1f1fd;
+  --sky-blue: #c1d8f0;
+  --navy-blue: #4663ac;
+  --cloud-blue: #d2deeb;
+  --bright-blue: #00b8ff;
+  --mid-blue: #009bd6;
+  --deep-blue: #00719c;
+  --dark-blue: #00415a;
+  --midnight-blue: #001f2b;
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--midnight-blue);
+  color: var(--light-blue);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the body takes the full height of the viewport */
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--deep-blue);
+  padding: 10px 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--cloud-blue);
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: var(--bright-blue);
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* About Section */
+.about-section {
+  padding: 50px 20px;
+  text-align: center;
+  color: var(--pale-blue);
+}
+
+.about-section h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: var(--bright-blue);
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.about-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--bright-blue);
+}
+
+.about-text {
+  max-width: 600px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+}
+
+strong {
+  color: var(--bright-blue);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: var(--deep-blue);
+  color: var(--cloud-blue);
+  width: 100%; /* Ensure the footer spans the entire width of the page */
+  height: 40px;
+  margin-top: auto; /* Push the footer to the bottom of the page */
+}
+
+footer p {
+  margin: 0;
+}

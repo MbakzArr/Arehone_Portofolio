@@ -1,0 +1,140 @@
+/* Color Palette */
+:root {
+    --light-blue: #c8d9ed;
+    --pale-blue: #e1f1fd;
+    --sky-blue: #c1d8f0;
+    --navy-blue: #4663ac;
+    --cloud-blue: #d2deeb;
+    --bright-blue: #00b8ff;
+    --mid-blue: #009bd6;
+    --deep-blue: #00719c;
+    --dark-blue: #00415a;
+    --midnight-blue: #001f2b;
+}
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--dark-blue);
+    color: var(--light-blue);
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--deep-blue);
+    padding: 10px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--cloud-blue);
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: var(--bright-blue);
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Education Section */
+.education-section {
+    width: 100%;
+    max-width: 1500px;
+    text-align: center;
+}
+
+.education-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: var(--bright-blue);
+}
+
+.education-list {
+    display: grid;
+    grid-template-columns: repeat(2, 280px); /* Two boxes per row */
+    gap: 40px; /* Space between the items */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Education List (Parent container for the boxes) */
+.education-list {
+    display: flex;
+    flex-wrap: wrap;  /* Allow the boxes to wrap onto a new line if necessary */
+    justify-content: center;  /* Center align the boxes horizontally */
+    gap: 40px;  /* Space between the boxes */
+    margin-top: 20px;
+}
+
+/* Education Item */
+.education-item {
+    background-color: var(--midnight-blue);
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: var(--cloud-blue);
+    text-align: left;
+    height: 400px; /* Fixed height to ensure all boxes are the same height */
+    width: 400px; /* Adjust width as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;  /* Add margin for vertical spacing between boxes */
+}
+
+
+/* Last box takes the full width of the row */
+.education-list > .education-item:nth-child(5) {
+    grid-column: span 2; /* Last item spans both columns */
+}
+
+.education-item h2 {
+    color: var(--bright-blue);
+    margin-bottom: 10px;
+}
+
+.education-item p {
+    margin: 5px 0;
+}
+
+.education-item ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 10px 0 0;
+}
+
+.education-item ul li {
+    margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--deep-blue);
+    color: var(--cloud-blue);
+  }
