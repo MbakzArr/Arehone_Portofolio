@@ -87,19 +87,4 @@ filterBar.addEventListener("click", (e) => {
   });
 });
 
-// ===== Contact form: works out of the box via mailto, posts to Formspree once configured =====
-const form = document.getElementById("contactForm");
-form.addEventListener("submit", (e) => {
-  if (form.action.includes("YOUR_FORM_ID")) {
-    e.preventDefault();
-    const d = new FormData(form);
-    const subject = encodeURIComponent(`Portfolio enquiry from ${d.get("name") || ""} ${d.get("surname") || ""}`.trim());
-    const body = encodeURIComponent(
-      `Name: ${d.get("name") || ""} ${d.get("surname") || ""}\n` +
-      `Email: ${d.get("email") || ""}\n` +
-      `Mobile: ${d.get("mobile") || ""}\n\n` +
-      `${d.get("message") || ""}`
-    );
-    window.location.href = `mailto:arehonembadaliga@gmail.com?subject=${subject}&body=${body}`;
-  }
-});
+// ===== Contact form: posts to Formspree =====
